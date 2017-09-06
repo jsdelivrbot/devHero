@@ -1,66 +1,221 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <% include ../partials/header.ejs %>
+	<title>Esporte Clube Varginha - INICIAL</title>
+	<!--fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>	
+	    <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>		
+	<!--//fonts-->		
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- for-mobile-apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Site oficial do Esporte Clube Varginha" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //for-mobile-apps -->
+	<!-- js -->
+		<script src="js/jquery.min.js"></script>
+	<!-- js -->
 </head>
-
 <body>
+<!-- header -->
+<div class="header">
+	 <div class="container">
+		 <div class="logo">
+			   <h1><a href="index.html">E.C. VARGINHA</a></h1>
+		 </div>	
+		 <div class="top-menu">
+			 <span class="menu"></span>
+			  <ul>
+				 <li class="active"><a href="index.html">INICIAL</a></li>
+				 <li><a href="about.html">SOBRE</a></li>
+				 <li><a href="gallery.html">GALERIA</a></li>
+				 <li><a href="404.html">EVENTOS</a></li>
+				 <li><a href="event.html">NOTÍCIAS</a></li>
+				 <li><a href="contact.html">CONTATO</a></li>
+			 </ul>			 
+		 </div>			
+		 <!-- script-for-menu -->
+		 <script>
+				$("span.menu").click(function(){
+					$(".top-menu ul").slideToggle("slow" , function(){
+					});
+				});
+		 </script>
+		 <!-- script-for-menu -->	  	
 
-  <% include ../partials/nav.ejs %>
-
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="/lang-logo.png">
-    </a>
-    <h1>Getting Started with Node on Heroku v1.0 dev branch</h1>
-    <p>This is a sample Node application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span class="glyphicon glyphicon-flash"></span> Getting Started with Node</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/node-js-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-  </div>
+		 <div class="clearfix"></div>
+	 </div>
 </div>
-<div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs" class="alert-link">Getting Started with Node on Heroku</a> tutorial.
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
-      <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/node-js-getting-started">Heroku Button</a> on the repository.</li>
-
-        <li>When Heroku received the source code, it fetched all the dependencies in the <a href="https://github.com/heroku/node-js-getting-started/blob/master/package.json">package.json</a>, creating a deployable slug.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
-      <ul>
-        <li>If you are following the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started</a> guide, then please head back to the tutorial and follow the next steps!</li>
-        <li>If you deployed this app by deploying the Heroku Button, then in a command line shell, run:</li>
-        <ul>
-          <li><code>git clone https://github.com/heroku/node-js-getting-started.git</code> - this will create a local copy of the source code for the app</li>
-          <li><code>cd node-js-getting-started</code> - change directory into the local source code repository</li>
-          <li><code>heroku git:remote -a &lt;your-app-name></code> - associate the Heroku app with the repository</li>
-          <li>You'll now be set up to run the app locally, or <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs#push-local-changes">deploy changes</a> to Heroku</li>
-        </ul>
-      </ul>
-      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-      <ul>
-        <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started with Node on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/deploying-nodejs">Deploying Node Apps on Heroku</a></li>
-      </ul>
-    </div>
-  </div> <!-- row -->
-   <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
-  </div>
+<!-- //header -->
+<!-- banner -->
+<div class="strip">
+	 <div class="container">
+	 <div class="search">
+		    <form>
+		    	<input type="text" value="" placeholder="Busca...">
+				<input type="submit" value="">
+			</form>
+     </div>     
+	 <div class="social">			 
+			 <a href="https://www.facebook.com/ecvarginha/"><i class="facebook"></i></a>
+			 <a href="#"><i class="twitter"></i></a>	
+			 <a href="#"><i class="google"></i></a>	
+			 <a href="#"><i class="youtube"></i></a>		
+	 </div>
+		<div class="clearfix"></div>
+		</div>
 </div>
+<!-- banner -->
+<div class="banner">
+		<script src="js/responsiveslides.min.js"></script>
+  <script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	speed: 300,
+        manualControls: '#slider3-pager',
+      });
+    });
+  </script>
 
-
+ <div class="slider">
+	  <div class="callbacks_container">
+	     <ul class="rslides" id="slider">
+	         <li>
+				  <img src="images/bnr3.jpg" alt="">
+				  <div class="banner-info">
+				  <h3>Sed ultricies elementum.</h3>
+				  <p>Lorem Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec a odio quam. Aenean ipsum arcu, 
+				  luctus vel ultricies ut, commodo sed turpis. Phasellus tristique lorem sit amet tellus dignissim hendrerit.
+				  In hac habitasse platea dictumst. Sed vehicula volutpat varius elit. consectetur adipiscing elit.</p>
+				  </div>
+	         </li>
+	         <li>
+				 <img src="images/bnr2.jpg" alt="">
+	        	 <div class="banner-info">
+				  <h3>Curabitur turpis posuere rutrum.</h3>
+				  <p>Lorem Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec a odio quam. Aenean ipsum arcu, 
+				  luctus vel ultricies ut, commodo sed turpis. Phasellus tristique lorem sit amet tellus dignissim hendrerit.
+				  In hac habitasse platea dictumst. Sed vehicula volutpat varius elit. consectetur adipiscing elit.</p>
+				  </div>
+			 </li>
+	         <li>
+	             <img src="images/bnr1.jpg" alt="">
+	        	 <div class="banner-info">
+				  <h3>Sed ultricies elementum.</h3>
+				  <p>Lorem Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec a odio quam. Aenean ipsum arcu, 
+				  luctus vel ultricies ut, commodo sed turpis. Phasellus tristique lorem sit amet tellus dignissim hendrerit.
+				  In hac habitasse platea dictumst. Sed vehicula volutpat varius elit. consectetur adipiscing elit.</p>
+				  </div>
+	         </li>
+	      </ul>
+	  </div>
+  </div>
+<div class="content">
+	 <div class="container">
+		 <div class="content-grids">
+			 <div class="col-md-4 content-grid1">
+				 <img src="images/c1.jpg" alt=""/>
+				 <h3>Champion's League</h3>
+				 <p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+				 Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker.</p>
+				 <a href="#">Read More..</a>
+			 </div>
+			 <div class="col-md-4 content-grid1">
+				 <img src="images/c2.jpg" alt=""/>
+				 <h3>Women's Cup</h3>
+				 <p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+				 Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker.</p>
+				 <a href="#">Read More..</a>
+			 </div>
+			 <div class="col-md-4 content-grid1">
+				 <img src="images/c3.jpg" alt=""/>
+				 <h3>Final Tournment</h3>
+				 <p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus 
+				 Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker.</p>
+				 <a href="#">Read More..</a>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
+	 </div>
+</div>
+<!--- //content--->
+<!-- content-bottom -->
+<div class="content-info">
+	 <div class="container">
+		 <div class="content-bottom-grids">
+			 <div class="col-md-4 popular">	
+				 <h3>POPULAR TAGS</h3>
+				 <ul>
+					 <li><a href="#">Ut vehicula nisl ut purus tempus aliquet.</a></li>
+					 <li><a href="#">Nullam a risus pharetra nisi commodo auctor.</a></li>
+					 <li><a href="#">Proin venenatis velit a fringilla rutrum.</a></li>
+					 <li><a href="#">Nunc facilisis dolor ac suscipit volutpat.</a></li>
+					 <li><a href="#">Cras tempor justo ac mauris laoreet lacus efficitur.</a></li>
+					 <li><a href="#">Sed tincidunt enim ac elit tempor erat consequat.</a></li>
+					 <li><a href="#">Proin venenatis velit a fringilla rutrum.</a></li>
+					 <li><a href="#"> Aliquam vulputate mi vestibulum mauris ultrices.</a></li>
+				 </ul>
+			 </div>
+			 <div class="col-md-4 welcome-pic">
+				 <h3>ABOUT</h3>
+				 <h4>Morbi sed arcu mollis, elementum erat venenatis, tincidunt tellus.</h4>
+				 <img src="images/cnt.ab.jpg" alt=""/>
+				 <p>Aenean ut condimentum magna, mattis pretium massa. Sed sollicitudin ullamcorper auctor. Duis vestibulum velit id augue pulvinar egestas. 
+				 Morbi sed orci auctor, feugiat felis at, fermentum magna. In ac egestas lectus.</p>
+			</div>
+			<div class="col-md-4 coach">
+				 <h3>OUR COACHES</h3>
+				 <div class="coch-grid chr">
+					 <div class="coach-pic">
+						 <img src="images/ch1.jpg" alt=""/>
+					 </div>
+					 <div class="coach-pic-info">
+						 <h4><a href="#">Phasellus at Tellus</a></h4>
+						 <h5>Aenean vestibulum </h5>
+						 <p>Donec ornare massa at velit fringilla, condimentum magna ornare tincidunt nulla dignissim.</p>
+					 </div>
+					 <div class="clearfix"></div>
+				 </div>
+				 <div class="coch-grid">
+					 <div class="coach-pic">
+						 <img src="images/ch2.jpg" alt=""/>
+					 </div>
+					 <div class="coach-pic-info">
+						 <h4><a href="#">Phasellus at Tellus</a></h4>
+						 <h5>Aenean vestibulum </h5>
+						 <p>Donec ornare massa at velit fringilla, condimentum magna ornare tincidunt nulla dignissim.</p>
+					 </div>
+					 <div class="clearfix"></div>
+				 </div>
+			</div>
+			<div class="clearfix"></div>
+		 </div>
+	 </div>
+</div>
+<!-- //content-bottom -->
+<!--footer-->
+<div class="footer">
+	 <div class="container">
+		 <div class="copywrite">
+			 <p>© 2017 All Rights Reseverd Design by AxsDeveloper</a> </p>
+		 </div>
+		 <div class="footer-menu">
+			 <ul>
+				 <li class="active"><a href="index.html">INICIAL</a></li>
+				 <li><a href="about.html">SOBRE</a></li>
+				 <li><a href="gallery.html">GALERIA</a></li>
+				 <li><a href="404.html">EVENTOS</a></li>
+				 <li><a href="event.html">NOTÍCIAS</a></li>
+				 <li><a href="contact.html">CONTATO</a></li>
+			 </ul>
+		 </div>
+		 <div class="clearfix"></div>
+	 </div>
+</div>
+<!-- //footer -->
 </body>
 </html>
